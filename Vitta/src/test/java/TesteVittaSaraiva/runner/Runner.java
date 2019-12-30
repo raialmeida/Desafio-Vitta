@@ -15,8 +15,5 @@ snippets = SnippetType.CAMELCASE,
 dryRun = false,
 strict = false)
 public class Runner {
-	
-	
-	
 
 }

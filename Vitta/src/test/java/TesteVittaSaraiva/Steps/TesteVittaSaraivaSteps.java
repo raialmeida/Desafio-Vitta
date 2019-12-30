@@ -11,21 +11,23 @@ import cucumber.api.java.pt.Quando;
 public class TesteVittaSaraivaSteps {
 
 	protected WebDriver driver;
+	Browser print = new Browser();
 
 	@Dado("^que eu acesse o site Saraiva$")
 	public void queEuAcesseOSiteSaraiva() throws Throwable {
-		driver = Browser.Iniciadriver();
+		driver = Browser.Iniciadriver(); 
 	}
 
 	@Quando("^clicar no link entre ou cadastre-se$")
 	public void clicarNoLinkEntreOuCadastreSe() throws Throwable {
 		TesteVittaSaraivaPages.clicarCadastrar(driver);
-
+ 
 	}
 
 	@Então("^devera exibir um modal com botão ENTRAR COM CLIENTE SARAIVA OU CDASTRE -SE$")
 	public void deveraExibirUmModalComBotãoENTRARCOMCLIENTESARAIVAOUCDASTRESE() throws Throwable {
 		TesteVittaSaraivaPages.verificarBotaoNoModal(driver);
+		print.Print("Modal"); 
 	}
 
 	@Então("^clicar no botão$")
