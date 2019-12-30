@@ -38,6 +38,7 @@ public class TesteVittaSaraivaPages extends TesteVittaSaraivaBasePages {
 			}
 			return null;
 		}));
+		driver.manage().window().maximize();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(cadastrar));
 
 	}

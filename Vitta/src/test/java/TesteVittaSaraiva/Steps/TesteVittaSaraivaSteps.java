@@ -39,6 +39,7 @@ public class TesteVittaSaraivaSteps {
 	public void deveExibirUmaTelaComBotãoCADASTRAR() throws Throwable {
 
 		TesteVittaSaraivaPages.verificarBotaoCadastrarNovaJanela(driver);
+		print.Print("Tela com o botão CADASTRAR"); 
 	}
 
 	@Então("^clicar no botão cadastrar$")
@@ -49,6 +50,7 @@ public class TesteVittaSaraivaSteps {
 	@Então("^e exibido na tela os campos para preenchimento$")
 	public void eExibidoNaTelaOsCamposParaPreenchimento() throws Throwable {
 		TesteVittaSaraivaPages.verificarCamposNaTela(driver);
+		print.Print("Tela com os campos Obrigatórios");
 
 	}
 
@@ -104,6 +106,7 @@ public class TesteVittaSaraivaSteps {
 	@Então("^Aceitar recebimento de ofertas$")
 	public void aceitarRecebimentoDeOfertas() throws Throwable {
 		TesteVittaSaraivaPages.selecionarRecebimentoDeOfertas(driver);
+		print.Print("Tela com os campos preenchidos");
 	}
 	@Então("^clicar no botão Finalizar Cadastro$")
 	public void clicarNoBotãoFinalizarCadastro() throws Throwable {
