@@ -1,0 +1,115 @@
+package TesteVittaSaraiva.Steps;
+
+import org.openqa.selenium.WebDriver;
+
+import Suporte.Browser;
+import TesteVittaSaraiva.pages.TesteVittaSaraivaPages;
+import cucumber.api.java.pt.Dado;
+import cucumber.api.java.pt.Então;
+import cucumber.api.java.pt.Quando;
+
+public class TesteVittaSaraivaSteps {
+
+	protected WebDriver driver;
+
+	@Dado("^que eu acesse o site Saraiva$")
+	public void queEuAcesseOSiteSaraiva() throws Throwable {
+		driver = Browser.Iniciadriver();
+	}
+
+	@Quando("^clicar no link entre ou cadastre-se$")
+	public void clicarNoLinkEntreOuCadastreSe() throws Throwable {
+		TesteVittaSaraivaPages.clicarCadastrar(driver);
+
+	}
+
+	@Então("^devera exibir um modal com botão ENTRAR COM CLIENTE SARAIVA OU CDASTRE -SE$")
+	public void deveraExibirUmModalComBotãoENTRARCOMCLIENTESARAIVAOUCDASTRESE() throws Throwable {
+		TesteVittaSaraivaPages.verificarBotaoNoModal(driver);
+	}
+
+	@Então("^clicar no botão$")
+	public void clicarNoBotão() throws Throwable {
+		TesteVittaSaraivaPages.clicarBotaoNoModal(driver);
+	}
+
+	@Então("^deve exibir uma tela com botão CADASTRAR$")
+	public void deveExibirUmaTelaComBotãoCADASTRAR() throws Throwable {
+
+		TesteVittaSaraivaPages.verificarBotaoCadastrarNovaJanela(driver);
+	}
+
+	@Então("^clicar no botão cadastrar$")
+	public void clicarNoBotãocadastrar() throws Throwable {
+		TesteVittaSaraivaPages.clicarBotaoCadastrar(driver);
+	}
+
+	@Então("^e exibido na tela os campos para preenchimento$")
+	public void eExibidoNaTelaOsCamposParaPreenchimento() throws Throwable {
+		TesteVittaSaraivaPages.verificarCamposNaTela(driver);
+
+	}
+
+	@Então("^digitar \"([^\"]*)\" no campo Nome$")
+	public void digitarNoCampoNome(String arg1) throws Throwable {
+		TesteVittaSaraivaPages.digitarNome(driver, arg1);
+	}
+
+	@Então("^digitar \"([^\"]*)\" no campo Sobrenome$")
+	public void digitarNoCampoSobrenome(String arg1) throws Throwable {
+		TesteVittaSaraivaPages.digitarSobrenome(driver, arg1);
+	}
+
+	@Então("^digitar \"([^\"]*)\" no campo E-mail$")
+	public void digitarNoCampoEMail(String arg1) throws Throwable {
+		TesteVittaSaraivaPages.digitarEmail(driver, arg1);
+	}
+
+	@Então("^digitar \"([^\"]*)\" no campo Senha$")
+	public void digitarNoCampoSenha(String arg1) throws Throwable {
+		TesteVittaSaraivaPages.digitarSenha(driver, arg1);
+	}
+
+	@Então("^digitar \"([^\"]*)\" no campo Confirmar Senha$")
+	public void digitarNoCampoConfirmarSenha(String arg1) throws Throwable {
+		TesteVittaSaraivaPages.digitarConfirmarSenha(driver, arg1);
+	}
+
+	@Então("^digitar \"([^\"]*)\" no campo CPF$")
+	public void digitarNoCampoCPF(String arg1) throws Throwable {
+		TesteVittaSaraivaPages.digitarCpf(driver, arg1);
+	}
+
+	@Então("^marcar radio button o Sexo$")
+	public void marcarRadioButtonOSexo() throws Throwable {
+		TesteVittaSaraivaPages.selecionarSexo(driver);
+	}
+
+	@Então("^digitar \"([^\"]*)\" no campo Data de Nascimento$")
+	public void digitarNoCampoDataDeNascimento(String arg1) throws Throwable {
+		TesteVittaSaraivaPages.digitarDataDeNascimento(driver, arg1);
+	}
+
+	@Então("^digitar \"([^\"]*)\" no campo Celular$")
+	public void digitarNoCampoCelular(String arg1) throws Throwable {
+		TesteVittaSaraivaPages.digitarCelular(driver, arg1);
+	}
+
+	@Então("^digitar \"([^\"]*)\" no campo Endereço$")
+	public void digitarNoCampoEndereço(String arg1) throws Throwable {
+		TesteVittaSaraivaPages.digitarEndereco(driver, arg1);
+	}
+	@Então("^Aceitar recebimento de ofertas$")
+	public void aceitarRecebimentoDeOfertas() throws Throwable {
+		TesteVittaSaraivaPages.selecionarRecebimentoDeOfertas(driver);
+	}
+	@Então("^clicar no botão Finalizar Cadastro$")
+	public void clicarNoBotãoFinalizarCadastro() throws Throwable {
+		TesteVittaSaraivaPages.clickbotaoFinalizarCadastro(driver); 
+	}  
+
+	@Então("^fechar browser$")
+	public void fecharBrowser() throws Throwable {
+		// driver.close();
+	}
+}
