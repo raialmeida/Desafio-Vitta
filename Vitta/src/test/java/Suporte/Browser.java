@@ -29,8 +29,8 @@ public class Browser {
 		return driver;
 	}
 
-//screenshot
-	static String pastascreenshot = new SimpleDateFormat("yyyy-MM-dd HH-mm").format(Calendar.getInstance().getTime());
+//screenshot    
+	static String pastascreenshot = new SimpleDateFormat("dd-MM-yyyy HH-mm").format(Calendar.getInstance().getTime());
 
 	public void Print(String nomePrint) throws IOException {
 		File foto = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
