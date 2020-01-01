@@ -34,7 +34,7 @@ Funcionalidade: cadastrar usuário na loja.
     
     
    |nome | sobrenome| e-mail                | senha        | confirmar senha| CPF       |data nascimento| celular   |endereço cep|numero |telefone para contato|
-   |Joao | Santos   |joaosantos@gmail.com | 123456       |123456          |85473184960| 12/10/1998    |11946759888|04432-030   |12     |11945998011          |
+   |Joao | Santos   |joaosantos@gmail.com   | 123456       |123456          |85473184960| 12/10/1998    |11946759888|04432-030   |12     |11945998011          |
 
    #|nome| sobrenome| e-mail               | senha        | confirmar senha| CPF       |data nascimento| celular   |endereço cep|numero |telefone para contato|
  #  |Rai | Almeida  |raialmeida@hotmail.com| 123456       |123456          |64448625230| 12/02/1994    |11946759055|04432-030   |11     |11945898011          |
