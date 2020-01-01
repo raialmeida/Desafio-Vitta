@@ -16,6 +16,7 @@ public class TesteVittaSaraivaBasePages {
 	static By loadingModal = By.xpath("//*[@id=\"vtexIdContainer\"]/div");
 	static By EntrarComClienteOuCadastre = By.id("vtexIdUI-saraiva-oauth");
 	static By cadastrar = By.linkText("CADASTRAR");
+	static By clicabapessoa = By.id("abaPf");
 
 	static By nome = By.id("InputNome1");
 	static By sobrenome = By.id("InputSobrenome1");
@@ -27,8 +28,10 @@ public class TesteVittaSaraivaBasePages {
 	static By datadenascimento = By.id("InputDataNascimento1");
 	static By celular = By.id("InputCelular1");
 	static By cep = By.id("InputCep1");
+	static By numero = By.id("InputNumero1");
+	static By telefonecontato = By.id("InputTelefone1");
 	static By selecionarrecebimentooferta = By.xpath("//*[@id=\"newUser\"]//*[contains(text(),'Desejo receber e-mails de ofertas promocionais')] ");
-	static By clicbotao = By.xpath("FinalizarCadastro1");
+	static By clicFinalizarcadastro = By.id("FinalizarCadastro1");
 	
 	
 }

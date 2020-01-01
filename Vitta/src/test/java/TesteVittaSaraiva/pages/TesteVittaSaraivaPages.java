@@ -1,5 +1,6 @@
 package TesteVittaSaraiva.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -45,6 +46,10 @@ public class TesteVittaSaraivaPages extends TesteVittaSaraivaBasePages {
 
 	public static void clicarBotaoCadastrar(WebDriver driver) {
 		driver.findElement(cadastrar).click();
+	}
+
+	public static void clicarAbaPessoa(WebDriver driver) {
+		driver.findElement(clicabapessoa).click();
 
 	}
 
@@ -59,69 +64,76 @@ public class TesteVittaSaraivaPages extends TesteVittaSaraivaBasePages {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(datadenascimento));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(celular));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(cep));
-		
+
 	}
 
 	public static void digitarNome(WebDriver driver, String arg1) {
 		driver.findElement(nome).sendKeys(arg1);
-		
+
 	}
 
 	public static void digitarSobrenome(WebDriver driver, String arg1) {
 		driver.findElement(sobrenome).sendKeys(arg1);
-		
+
 	}
 
 	public static void digitarEmail(WebDriver driver, String arg1) {
 		driver.findElement(email).sendKeys(arg1);
-		
+
 	}
 
 	public static void digitarSenha(WebDriver driver, String arg1) {
 		driver.findElement(senha).sendKeys(arg1);
-		
+
 	}
 
 	public static void digitarConfirmarSenha(WebDriver driver, String arg1) {
 		driver.findElement(confirmarsenha).sendKeys(arg1);
-		
+
 	}
 
 	public static void digitarCpf(WebDriver driver, String arg1) {
 		driver.findElement(cpf).sendKeys(arg1);
-		
+
 	}
 
 	public static void selecionarSexo(WebDriver driver) {
 		driver.findElement(sexo).click();
-		//WebElement radio = driver.findElement(sexo);
-	   // assertEquals(((WebElement) sexo).isSelected(),true);
-		
+
 	}
 
 	public static void digitarDataDeNascimento(WebDriver driver, String arg1) {
 		driver.findElement(datadenascimento).sendKeys(arg1);
-		
+
 	}
 
 	public static void digitarCelular(WebDriver driver, String arg1) {
 		driver.findElement(celular).sendKeys(arg1);
-		
+
 	}
 
 	public static void digitarEndereco(WebDriver driver, String arg1) {
 		driver.findElement(cep).sendKeys(arg1);
-	
+	}
+	public static void digitarNumero(WebDriver driver, String arg1) {
+		driver.findElement(numero).click();	
+		driver.findElement(numero).sendKeys(arg1);	
+	}	
+	public static void digitarTelefoneParaContato(WebDriver driver, String arg1) {
+		driver.findElement(telefonecontato).sendKeys(arg1);
+		
 	}
 	public static void selecionarRecebimentoDeOfertas(WebDriver driver) {
 		driver.findElement(selecionarrecebimentooferta).click();
-		
+
 	}
 
 	public static void clickbotaoFinalizarCadastro(WebDriver driver) {
-		//driver.findElement(clicbotao).click();
-		
+		driver.findElement(clicFinalizarcadastro).click();
+
 	}
+
+	
 
 	
 

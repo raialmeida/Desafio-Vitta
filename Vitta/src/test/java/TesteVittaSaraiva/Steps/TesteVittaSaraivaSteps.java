@@ -15,19 +15,19 @@ public class TesteVittaSaraivaSteps {
 
 	@Dado("^que eu acesse o site Saraiva$")
 	public void queEuAcesseOSiteSaraiva() throws Throwable {
-		driver = Browser.Iniciadriver(); 
+		driver = Browser.Iniciadriver();
 	}
 
 	@Quando("^clicar no link entre ou cadastre-se$")
 	public void clicarNoLinkEntreOuCadastreSe() throws Throwable {
 		TesteVittaSaraivaPages.clicarCadastrar(driver);
- 
+
 	}
 
 	@Então("^devera exibir um modal com botão ENTRAR COM CLIENTE SARAIVA OU CDASTRE -SE$")
 	public void deveraExibirUmModalComBotãoENTRARCOMCLIENTESARAIVAOUCDASTRESE() throws Throwable {
 		TesteVittaSaraivaPages.verificarBotaoNoModal(driver);
-		print.Print("Modal"); 
+		print.Print("Modal");
 	}
 
 	@Então("^clicar no botão$")
@@ -39,12 +39,17 @@ public class TesteVittaSaraivaSteps {
 	public void deveExibirUmaTelaComBotãoCADASTRAR() throws Throwable {
 
 		TesteVittaSaraivaPages.verificarBotaoCadastrarNovaJanela(driver);
-		print.Print("Tela com o botão CADASTRAR"); 
+		print.Print("Tela com o botão CADASTRAR");
 	}
 
 	@Então("^clicar no botão cadastrar$")
 	public void clicarNoBotãocadastrar() throws Throwable {
 		TesteVittaSaraivaPages.clicarBotaoCadastrar(driver);
+	}
+
+	@Então("^clicar na Aba Pessoa Física$")
+	public void clicarNaSeçãoPessoaFísica() throws Throwable {
+		TesteVittaSaraivaPages.clicarAbaPessoa(driver);
 	}
 
 	@Então("^e exibido na tela os campos para preenchimento$")
@@ -99,22 +104,33 @@ public class TesteVittaSaraivaSteps {
 		TesteVittaSaraivaPages.digitarCelular(driver, arg1);
 	}
 
-	@Então("^digitar \"([^\"]*)\" no campo Endereço$")
+	@Então("^digitar \"([^\"]*)\" no campo cep$")
 	public void digitarNoCampoEndereço(String arg1) throws Throwable {
 		TesteVittaSaraivaPages.digitarEndereco(driver, arg1);
 	}
+
+	@Então("^digitar \"([^\"]*)\" no campo numero$")
+	public void digitar(String arg1) throws Throwable {
+		TesteVittaSaraivaPages.digitarNumero(driver, arg1);
+	}
+	@Então("^digitar \"([^\"]*)\" telefone para contato$")
+	public void digitarTelefoneParaContato(String arg1) throws Throwable {
+		TesteVittaSaraivaPages.digitarTelefoneParaContato(driver, arg1);
+	}
+
 	@Então("^Aceitar recebimento de ofertas$")
 	public void aceitarRecebimentoDeOfertas() throws Throwable {
 		TesteVittaSaraivaPages.selecionarRecebimentoDeOfertas(driver);
 		print.Print("Tela com os campos preenchidos");
 	}
+
 	@Então("^clicar no botão Finalizar Cadastro$")
 	public void clicarNoBotãoFinalizarCadastro() throws Throwable {
-		TesteVittaSaraivaPages.clickbotaoFinalizarCadastro(driver); 
-	}  
+		TesteVittaSaraivaPages.clickbotaoFinalizarCadastro(driver);
+	}
 
 	@Então("^fechar browser$")
 	public void fecharBrowser() throws Throwable {
-		// driver.close();
+		//driver.close();
 	}
 }
