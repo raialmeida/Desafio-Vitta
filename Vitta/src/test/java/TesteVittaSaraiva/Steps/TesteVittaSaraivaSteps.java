@@ -127,6 +127,7 @@ public class TesteVittaSaraivaSteps {
 	@Então("^clicar no botão Finalizar Cadastro$")
 	public void clicarNoBotãoFinalizarCadastro() throws Throwable {
 		TesteVittaSaraivaPages.clickbotaoFinalizarCadastro(driver);
+		print.Print("Finalizar Cadastro");
 	}
 
 	@Então("^fechar browser$")
