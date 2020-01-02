@@ -147,12 +147,12 @@ public class TesteVittaSaraivaPages extends TesteVittaSaraivaBasePages {
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(clicFinalizarcadastro));
 		driver.findElement(clicFinalizarcadastro).click();
-		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		
 
 	}
 
 	public static void verificarUsuarioCadastrado(WebDriver driver, String arg1) {
-		
+		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		WebDriverWait wait = new WebDriverWait(driver, 20);
 		String mainHandle = driver.getWindowHandle();
 		driver.switchTo().window(wait.until((WebDriver drv) -> {
@@ -165,8 +165,9 @@ public class TesteVittaSaraivaPages extends TesteVittaSaraivaBasePages {
 		
 		wait.until(ExpectedConditions.visibilityOfElementLocated(verificarusuariocadastrado));
 		
-		String usuariocad = driver.findElement(verificarusuariocadastrado).getText(); 
-		assertEquals(arg1, usuariocad); 
+		WebElement element = driver.findElement(verificarusuariocadastrado); 
+		String nome = element.getText();
+		assertEquals(arg1, nome); 
 		
 		
 	}
