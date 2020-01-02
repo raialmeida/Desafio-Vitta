@@ -60,8 +60,8 @@ public class TesteVittaSaraivaSteps {
 	}
 
 	@Então("^digitar \"([^\"]*)\" no campo Nome$")
-	public void digitarNoCampoNome(String arg1) throws Throwable {
-		TesteVittaSaraivaPages.digitarNome(driver, arg1);
+	public void digitarNoCampoNome(String nome) throws Throwable {
+		TesteVittaSaraivaPages.digitarNome(driver, nome);
 	}
 
 	@Então("^digitar \"([^\"]*)\" no campo Sobrenome$")
@@ -129,7 +129,11 @@ public class TesteVittaSaraivaSteps {
 		TesteVittaSaraivaPages.clickbotaoFinalizarCadastro(driver);
 		print.Print("Finalizar Cadastro");
 	}
-
+	@Então("^verificar usuario cadastrado$")
+	public void verificarUsuarioCadastrado() throws Throwable {
+		TesteVittaSaraivaPages.verificarUsuarioCadastrado(driver);
+		print.Print("Usuário Cadastrado");
+	}
 	@Então("^fechar browser$")
 	public void fecharBrowser() throws Throwable {
 		//driver.close();

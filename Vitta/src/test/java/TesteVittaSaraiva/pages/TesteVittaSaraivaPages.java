@@ -1,12 +1,16 @@
 package TesteVittaSaraiva.pages;
 
+import static org.junit.Assert.assertEquals;
+
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class TesteVittaSaraivaPages extends TesteVittaSaraivaBasePages {
-
+	static String nomeusuario;
 	public TesteVittaSaraivaPages(WebDriver driver) {
 		super(driver);
 
@@ -29,8 +33,12 @@ public class TesteVittaSaraivaPages extends TesteVittaSaraivaBasePages {
 
 	}
 
+	/*
+	 * 
+	 * Metódo para alternar para a janela de cadastro Novo Usuario
+	 */
 	public static void verificarBotaoCadastrarNovaJanela(WebDriver driver) {
-		WebDriverWait wait = new WebDriverWait(driver, 20);
+		WebDriverWait wait = new WebDriverWait(driver, 10);
 		String mainHandle = driver.getWindowHandle();
 		driver.switchTo().window(wait.until((WebDriver drv) -> {
 			for (String handle : drv.getWindowHandles()) {
@@ -115,14 +123,17 @@ public class TesteVittaSaraivaPages extends TesteVittaSaraivaBasePages {
 	public static void digitarEndereco(WebDriver driver, String arg1) {
 		driver.findElement(cep).sendKeys(arg1);
 	}
+
 	public static void digitarNumero(WebDriver driver, String arg1) {
-		driver.findElement(numero).click();	
-		driver.findElement(numero).sendKeys(arg1);	
-	}	
+		driver.findElement(numero).click();
+		driver.findElement(numero).sendKeys(arg1);
+	}
+
 	public static void digitarTelefoneParaContato(WebDriver driver, String arg1) {
 		driver.findElement(telefonecontato).sendKeys(arg1);
-		
+
 	}
+
 	public static void selecionarRecebimentoDeOfertas(WebDriver driver) {
 		driver.findElement(selecionarrecebimentooferta).click();
 
@@ -130,11 +141,27 @@ public class TesteVittaSaraivaPages extends TesteVittaSaraivaBasePages {
 
 	public static void clickbotaoFinalizarCadastro(WebDriver driver) {
 		driver.findElement(clicFinalizarcadastro).click();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 	}
 
-	
-
-	
+	public static void verificarUsuarioCadastrado(WebDriver driver) {
+		
+		WebDriverWait wait = new WebDriverWait(driver, 20);
+		String mainHandle = driver.getWindowHandle();
+		driver.switchTo().window(wait.until((WebDriver drv) -> {
+			for (String handle : drv.getWindowHandles()) {
+				if (!handle.equals(mainHandle))
+					return handle;
+			}
+			return null;
+		}));
+		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(verificarusuariocadastrado));
+		
+		String usuario = driver.findElement(verificarusuariocadastrado).getText(); 
+		assertEquals(nomeusuario, usuario); 
+		
+	}
 
 }

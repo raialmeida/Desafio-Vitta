@@ -12,12 +12,13 @@ public class TesteVittaSaraivaBasePages {
 		//PageFactory.initElements(driver, this);
  
 	}
+	 
 	static By EntreOuCadastre = By.id("link-account");
 	static By loadingModal = By.xpath("//*[@id=\"vtexIdContainer\"]/div");
 	static By EntrarComClienteOuCadastre = By.id("vtexIdUI-saraiva-oauth");
 	static By cadastrar = By.linkText("CADASTRAR");
 	static By clicabapessoa = By.id("abaPf");
-
+    
 	static By nome = By.id("InputNome1");
 	static By sobrenome = By.id("InputSobrenome1");
 	static By email = By.id("InputEmail1");
@@ -32,6 +33,9 @@ public class TesteVittaSaraivaBasePages {
 	static By telefonecontato = By.id("InputTelefone1");
 	static By selecionarrecebimentooferta = By.xpath("//*[@id=\"newUser\"]//*[contains(text(),'Desejo receber e-mails de ofertas promocionais')] ");
 	static By clicFinalizarcadastro = By.id("FinalizarCadastro1");
+	static By verificarusuariocadastrado = By.className("infos__welcome-text");
+	
+	String nomeusuario = driver.findElement(nome).getText();
 	
 	
 }
