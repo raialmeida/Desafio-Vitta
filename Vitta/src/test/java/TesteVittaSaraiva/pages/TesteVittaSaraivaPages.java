@@ -4,13 +4,14 @@ import static org.junit.Assert.assertEquals;
 
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class TesteVittaSaraivaPages extends TesteVittaSaraivaBasePages {
-	static String nomeusuario;
+	static String usuario;
 	public TesteVittaSaraivaPages(WebDriver driver) {
 		super(driver);
 
@@ -47,7 +48,7 @@ public class TesteVittaSaraivaPages extends TesteVittaSaraivaBasePages {
 			}
 			return null;
 		}));
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(cadastrar));
 
 	}
@@ -77,6 +78,7 @@ public class TesteVittaSaraivaPages extends TesteVittaSaraivaBasePages {
 
 	public static void digitarNome(WebDriver driver, String arg1) {
 		driver.findElement(nome).sendKeys(arg1);
+		
 
 	}
 
@@ -122,6 +124,8 @@ public class TesteVittaSaraivaPages extends TesteVittaSaraivaBasePages {
 
 	public static void digitarEndereco(WebDriver driver, String arg1) {
 		driver.findElement(cep).sendKeys(arg1);
+		WebElement element = driver.findElement(cep);
+		element.sendKeys(Keys.TAB);
 	}
 
 	public static void digitarNumero(WebDriver driver, String arg1) {
@@ -140,12 +144,14 @@ public class TesteVittaSaraivaPages extends TesteVittaSaraivaBasePages {
 	}
 
 	public static void clickbotaoFinalizarCadastro(WebDriver driver) {
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(clicFinalizarcadastro));
 		driver.findElement(clicFinalizarcadastro).click();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 
 	}
 
-	public static void verificarUsuarioCadastrado(WebDriver driver) {
+	public static void verificarUsuarioCadastrado(WebDriver driver, String arg1) {
 		
 		WebDriverWait wait = new WebDriverWait(driver, 20);
 		String mainHandle = driver.getWindowHandle();
@@ -159,8 +165,9 @@ public class TesteVittaSaraivaPages extends TesteVittaSaraivaBasePages {
 		
 		wait.until(ExpectedConditions.visibilityOfElementLocated(verificarusuariocadastrado));
 		
-		String usuario = driver.findElement(verificarusuariocadastrado).getText(); 
-		assertEquals(nomeusuario, usuario); 
+		String usuariocad = driver.findElement(verificarusuariocadastrado).getText(); 
+		assertEquals(arg1, usuariocad); 
+		
 		
 	}
 

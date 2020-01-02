@@ -129,9 +129,9 @@ public class TesteVittaSaraivaSteps {
 		TesteVittaSaraivaPages.clickbotaoFinalizarCadastro(driver);
 		print.Print("Finalizar Cadastro");
 	}
-	@Então("^verificar usuario cadastrado$")
-	public void verificarUsuarioCadastrado() throws Throwable {
-		TesteVittaSaraivaPages.verificarUsuarioCadastrado(driver);
+	@Então("^verificar \"([^\"]*)\" usuario cadastrado$")
+	public void verificarUsuarioCadastrado(String arg1) throws Throwable {
+		TesteVittaSaraivaPages.verificarUsuarioCadastrado(driver, arg1);
 		print.Print("Usuário Cadastrado");
 	}
 	@Então("^fechar browser$")

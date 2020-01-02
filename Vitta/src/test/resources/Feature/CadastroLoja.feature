@@ -26,7 +26,7 @@ Funcionalidade: cadastrar usuário na loja.
     E digitar "<telefone para contato>" telefone para contato
     E Aceitar recebimento de ofertas 
     Então clicar no botão Finalizar Cadastro
-    E verificar usuario cadastrado
+    E verificar "<nome>" usuario cadastrado 
     Então fechar browser
     
 
@@ -34,8 +34,8 @@ Funcionalidade: cadastrar usuário na loja.
  Exemplos:
     
     
-   |nome    |sobrenome |e-mail             |senha      |confirmar senha| CPF       |data nascimento| celular   |endereço cep|numero |telefone para contato|
-   |Mariana |Silva     |marisilva@gmail.com|1235587    |1235587        |67152264317|12/11/1990     |11946789887|04456-205   |155    |11945654725          |
+   |nome    |sobrenome |e-mail                  |senha     |confirmar senha| CPF       |data nascimento| celular   |endereço cep|numero |telefone para contato|
+   |Juliano |Pereira   |julianopereira@gmail.com|123789    |123789         |33228262103|12/12/1985     |11987148887|04432030    |200    |11987148887          |
 
    #|nome| sobrenome| e-mail               | senha        | confirmar senha| CPF       |data nascimento| celular   |endereço cep|numero |telefone para contato|
  #  |Rai | Almeida  |raialmeida@hotmail.com| 123456       |123456          |64448625230| 12/02/1994    |11946759055|04432-030   |11     |11945898011          |

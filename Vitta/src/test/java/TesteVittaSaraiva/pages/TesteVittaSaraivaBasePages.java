@@ -35,7 +35,7 @@ public class TesteVittaSaraivaBasePages {
 	static By clicFinalizarcadastro = By.id("FinalizarCadastro1");
 	static By verificarusuariocadastrado = By.className("infos__welcome-text");
 	
-	String nomeusuario = driver.findElement(nome).getText();
+	
 	
 	
 }
