@@ -138,6 +138,6 @@ public class TesteVittaSaraivaSteps {
 	}
 	@Então("^fechar browser$")
 	public void fecharBrowser() throws Throwable {
-		driver.close();
+		driver.close(); 
 	}
 }

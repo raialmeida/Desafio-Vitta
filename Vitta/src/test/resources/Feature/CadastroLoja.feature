@@ -27,7 +27,7 @@ Funcionalidade: cadastrar usuário na loja.
     E Aceitar recebimento de ofertas 
     Então clicar no botão Finalizar Cadastro
     E verificar "<nome>" usuario cadastrado 
-    Então fechar browser
+    Então fechar browser 
     
 
     
