@@ -36,5 +36,5 @@
    na classe Browser.
  
  - Dentro do pacote TesteWebJump.runner contém a classe Runner.
-  Executar a classe "Runner" para executar os testes.
+  Executar a classe **Runner** para executar os testes.
    
