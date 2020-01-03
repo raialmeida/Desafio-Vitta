@@ -8,7 +8,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(plugin = "pretty",
-glue = "TesteVittaSaraiva.Steps",
+glue  = "TesteVittaSaraiva.Steps",
 features = "src\\test\\resources\\Feature\\CadastroLoja.feature",
 monochrome = true,
 snippets = SnippetType.CAMELCASE,

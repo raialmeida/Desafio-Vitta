@@ -55,7 +55,7 @@ public class TesteVittaSaraivaPages extends TesteVittaSaraivaBasePages {
 
 	public static void clicarBotaoCadastrar(WebDriver driver) {
 		driver.findElement(cadastrar).click();
-	}
+	} 
 
 	public static void clicarAbaPessoa(WebDriver driver) {
 		driver.findElement(clicabapessoa).click();
