@@ -2,6 +2,9 @@
 
 1. No repositório contém a documentação do [Casos de Testes](https://github.com/raialmeida/Desafio-Vitta/blob/master/Doc_CT_Vitta.xlsx?raw=true).
 2. Contém bugs encontrados no [documento Word](https://github.com/raialmeida/Desafio-Vitta/blob/master/Evidencias%20Teste%20bug%20report.docx?raw=true).
+3. Contém o arquivo BDD Cadastro. 
+4. o projeto automação está na pasta **Vitta**
+
 
 ## Ferramentas Utilizada.
 
