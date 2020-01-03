@@ -1,5 +1,7 @@
 # Desafio-Vitta
 
+1. No repositório contém a documentação do [Casos de Testes](https://github.com/raialmeida/Desafio-Vitta/blob/master/Doc_Vitta.xlsx).
+2. Contém bugs encontrados no [documento Word](https://github.com/raialmeida/Desafio-Vitta/blob/master/Evidencias%20Teste%20bug%20report.docx).
 
 ## Ferramentas Utilizada.
 
@@ -34,7 +36,7 @@
  
  - Todas as dependências necessárias estão no arquivo pom.xml, ao abrir e salvar o arquivo as dependências serão instaladas automaticamente.
    
- - Baixar o chromedriver e coolocar na pasta _Driver_ ou então colocar na pasta desejável, so definir o caminho do driver
+ - Baixar o chromedriver e colocar na pasta _Driver_ ou então colocar na pasta desejável, so definir o caminho do driver
    na classe Browser.
  
  - Dentro do pacote TesteWebJump.runner contém a classe Runner.
