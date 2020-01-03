@@ -35,6 +35,6 @@ Funcionalidade: cadastrar usuário na loja.
     
     
    |nome    |sobrenome |e-mail            |senha     |confirmar senha| CPF       |data nascimento| celular   |endereço cep|numero |telefone para contato|
-   |Pedro   |Pereira   |ppedro@hotmail.com|047555    |047555         |16568762725|13/12/1990     |11989133522|04430170    |500    |11929489822          |
+   |Manoel  |Pereira   |manoel@hotmail.com|047888    |047888         |23242764889|13/12/1971     |11989133789|04430170    |500    |11929489852          |
 
    
