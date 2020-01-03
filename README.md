@@ -14,6 +14,8 @@
  - Plugin do Cucumber (Instalado dentro do Eclipse, informações abaixo)
  - JDK 8
  - chromedriver Version 79.0.3945.36 (Só baixar, informações abaixo)
+ - Framework JUnit
+ - Selenium 
 
 
 ## Linguagem/SO
