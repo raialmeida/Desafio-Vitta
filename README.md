@@ -7,16 +7,16 @@
 
   ##### _Instalar todas abaixo._
 
- - Eclpse Version: 2019-09 R (4.13.0)
+ - Eclipse Version: 2019-09 R (4.13.0)
  - Plugin do Cucumber (Instalado dentro do Eclipse, informações abaixo)
  - JDK 8
  - chromedriver Version 79.0.3945.36 (Só baixar, informações abaixo)
 
 
-## Linguagem/S.O
+## Linguagem/SO
 
  - Java
- - S.O Windows
+ - SO Windows
 
 ## Instruções para executar os testes.
 
