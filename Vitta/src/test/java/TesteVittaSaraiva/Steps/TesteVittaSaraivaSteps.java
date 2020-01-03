@@ -16,6 +16,7 @@ public class TesteVittaSaraivaSteps {
 	@Dado("^que eu acesse o site Saraiva$")
 	public void queEuAcesseOSiteSaraiva() throws Throwable {
 		driver = Browser.Iniciadriver();
+		print.Print("Evi Site");
 	}
 
 	@Quando("^clicar no link entre ou cadastre-se$")
@@ -27,7 +28,7 @@ public class TesteVittaSaraivaSteps {
 	@Então("^devera exibir um modal com botão ENTRAR COM CLIENTE SARAIVA OU CDASTRE -SE$")
 	public void deveraExibirUmModalComBotãoENTRARCOMCLIENTESARAIVAOUCDASTRESE() throws Throwable {
 		TesteVittaSaraivaPages.verificarBotaoNoModal(driver);
-		print.Print("Modal");
+		print.Print("Evi Modal ENTRAR COM CLIENTE SARAIVA OU CDASTRE -SE");
 	}
 
 	@Então("^clicar no botão$")
@@ -37,9 +38,8 @@ public class TesteVittaSaraivaSteps {
 
 	@Então("^deve exibir uma tela com botão CADASTRAR$")
 	public void deveExibirUmaTelaComBotãoCADASTRAR() throws Throwable {
-
 		TesteVittaSaraivaPages.verificarBotaoCadastrarNovaJanela(driver);
-		print.Print("Tela com o botão CADASTRAR");
+		print.Print("Evi Tela com o botão CADASTRAR");
 	}
 
 	@Então("^clicar no botão cadastrar$")
@@ -50,12 +50,13 @@ public class TesteVittaSaraivaSteps {
 	@Então("^clicar na Aba Pessoa Física$")
 	public void clicarNaSeçãoPessoaFísica() throws Throwable {
 		TesteVittaSaraivaPages.clicarAbaPessoa(driver);
+		print.Print("Evi Aba Pessoa Física");
 	}
 
 	@Então("^e exibido na tela os campos para preenchimento$")
 	public void eExibidoNaTelaOsCamposParaPreenchimento() throws Throwable {
 		TesteVittaSaraivaPages.verificarCamposNaTela(driver);
-		print.Print("Tela com os campos Obrigatórios");
+		print.Print("Evi Tela com os campos Obrigatórios");
 
 	}
 
@@ -102,6 +103,7 @@ public class TesteVittaSaraivaSteps {
 	@Então("^digitar \"([^\"]*)\" no campo Celular$")
 	public void digitarNoCampoCelular(String arg1) throws Throwable {
 		TesteVittaSaraivaPages.digitarCelular(driver, arg1);
+		print.Print("Evi Tela 1 com os campos preenchidos");
 	}
 
 	@Então("^digitar \"([^\"]*)\" no campo cep$")
@@ -121,21 +123,21 @@ public class TesteVittaSaraivaSteps {
 	@Então("^Aceitar recebimento de ofertas$")
 	public void aceitarRecebimentoDeOfertas() throws Throwable {
 		TesteVittaSaraivaPages.selecionarRecebimentoDeOfertas(driver);
-		print.Print("Tela com os campos preenchidos");
+		print.Print("Evi Tela 2 com os campos preenchidos");
 	}
 
 	@Então("^clicar no botão Finalizar Cadastro$")
 	public void clicarNoBotãoFinalizarCadastro() throws Throwable {
 		TesteVittaSaraivaPages.clickbotaoFinalizarCadastro(driver);
-		print.Print("Finalizar Cadastro");
+		print.Print("Evi Finalizar Cadastro");
 	}
 	@Então("^verificar \"([^\"]*)\" usuario cadastrado$")
 	public void verificarUsuarioCadastrado(String arg1) throws Throwable {
 		TesteVittaSaraivaPages.verificarUsuarioCadastrado(driver, arg1);
-		print.Print("Usuário Cadastrado");
+		print.Print("Evi Tela Usuário Cadastrado");
 	}
 	@Então("^fechar browser$")
 	public void fecharBrowser() throws Throwable {
-		//driver.close();
+		driver.close();
 	}
 }

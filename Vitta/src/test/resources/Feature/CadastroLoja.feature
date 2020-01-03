@@ -34,8 +34,7 @@ Funcionalidade: cadastrar usuário na loja.
  Exemplos:
     
     
-   |nome    |sobrenome |e-mail                  |senha     |confirmar senha| CPF       |data nascimento| celular   |endereço cep|numero |telefone para contato|
-   |Juliano |Pereira   |julianopereira@gmail.com|123789    |123789         |33228262103|12/12/1985     |11987148887|04432030    |200    |11987148887          |
+   |nome    |sobrenome |e-mail            |senha     |confirmar senha| CPF       |data nascimento| celular   |endereço cep|numero |telefone para contato|
+   |Pedro   |Pereira   |ppedro@hotmail.com|047555    |047555         |16568762725|13/12/1990     |11989133522|04430170    |500    |11929489822          |
 
-   #|nome| sobrenome| e-mail               | senha        | confirmar senha| CPF       |data nascimento| celular   |endereço cep|numero |telefone para contato|
- #  |Rai | Almeida  |raialmeida@hotmail.com| 123456       |123456          |64448625230| 12/02/1994    |11946759055|04432-030   |11     |11945898011          |
+   
